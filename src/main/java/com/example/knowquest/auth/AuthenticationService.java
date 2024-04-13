@@ -6,6 +6,7 @@ import com.example.knowquest.config.JwtService;
 import com.example.knowquest.token.Token;
 import com.example.knowquest.token.TokenRepository;
 import com.example.knowquest.token.TokenType;
+import com.example.knowquest.user.Role;
 import com.example.knowquest.user.User;
 import com.example.knowquest.user.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,7 +40,7 @@ public class AuthenticationService {
         .lastname(request.getLastname())
         .email(request.getEmail())
         .password(passwordEncoder.encode(request.getPassword()))
-        .role(request.getRole())
+        .role(Role.USER)
         .build();
     var savedUser = repository.save(user);
     var jwtToken = jwtService.generateToken(user);
