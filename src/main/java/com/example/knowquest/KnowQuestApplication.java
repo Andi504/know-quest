@@ -8,8 +8,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 public class KnowQuestApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(KnowQuestApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(KnowQuestApplication.class, args);
+    }
 
 }
